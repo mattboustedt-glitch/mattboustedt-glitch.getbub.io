@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Superior Built Co. — rugged denim, hooded workwear jackets, and everyday footwear. Be Superior or Nothing.">
+  <meta name="theme-color" content="#171715">
+  <title>Superior Built Co. | Be Superior or Nothing</title>
+  <style>
+    :root{--ink:#171715;--paper:#f4f0e8;--tan:#b9824e;--muted:#b9b4aa;--line:rgba(255,255,255,.16);--max:1160px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:#f8f5ef;font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(23,23,21,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .wordmark{font-family:"Brush Script MT","Segoe Script",cursive;font-size:37px;font-style:italic;line-height:1;color:#fff;letter-spacing:-1.8px}
+    .wordmark small{display:block;font:700 9px Arial,sans-serif;letter-spacing:4px;text-align:center;margin-top:2px}
+    nav{display:flex;gap:25px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:1.4px;color:#e3ded5}
+    .nav-cta,.btn{display:inline-block;background:var(--tan);color:#171715;padding:12px 19px;font-size:11px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;border:1px solid var(--tan)}
+    .hero{position:relative;min-height:610px;display:flex;align-items:flex-end;overflow:hidden;background:#222}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.24)),url('assets/lookbook.jpg') center 38%/cover no-repeat;transform:scale(1.01)}
+    .hero-content{position:relative;padding:90px 0 78px;max-width:650px}
+    .eyebrow{color:#d7a675;font-size:11px;font-weight:bold;letter-spacing:3px;text-transform:uppercase}
+    h1{font-size:clamp(44px,7vw,82px);line-height:.98;letter-spacing:-3px;margin:18px 0 20px;text-transform:uppercase}
+    h1 em{font-family:"Brush Script MT","Segoe Script",cursive;text-transform:none;font-weight:400;letter-spacing:-3px}
+    .hero p{max-width:520px;color:#e4ded5;font-size:17px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+    section{padding:84px 0}.section-kicker{font-size:10px;letter-spacing:3px;color:var(--tan);font-weight:bold;text-transform:uppercase}
+    h2{font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-1.5px;margin:12px 0 18px;text-transform:uppercase}
+    .intro{max-width:710px;color:#c9c3b9;font-size:16px}
+    .manifesto{background:var(--paper);color:#1c1b19;text-align:center;padding:65px 20px}
+    .manifesto .script{font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;font-size:clamp(48px,8vw,88px);line-height:1}
+    .manifesto strong{display:block;letter-spacing:3px;font-size:13px;margin-top:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+    .product{background:#242320;border:1px solid var(--line)}
+    .product img{display:block;width:100%;height:245px;object-fit:cover}
+    .product-copy{padding:20px}.product h3{margin:0 0 8px;text-transform:uppercase;letter-spacing:1px;font-size:17px}
+    .product p{margin:0;color:#bdb7ad;font-size:13px}
+    .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .feature img{width:100%;display:block;border:1px solid var(--line)}
+    .checks{padding:0;list-style:none;color:#d4cec4}.checks li{padding:10px 0;border-bottom:1px solid var(--line)}
+    .checks li:before{content:"✦";color:var(--tan);margin-right:12px}
+    .funding{background:#242320;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .fund-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .amount{font-size:clamp(48px,7vw,76px);font-weight:800;letter-spacing:-3px;color:#e0b184}
+    .amount span{font-size:15px;letter-spacing:2px;display:block;color:#eee7dc}
+    .note{font-size:11px;color:#a9a398;margin-top:14px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
+    .step{border-top:2px solid var(--tan);padding-top:15px}.step b{font-size:12px;letter-spacing:1px;text-transform:uppercase}.step p{font-size:13px;color:#bdb7ad}
+    .closing{text-align:center;background:linear-gradient(180deg,#171715,#29251f)}
+    .closing p{max-width:650px;margin:0 auto 28px;color:#c9c3b9}
+    footer{padding:28px 0;color:#9f9a91;font-size:11px;border-top:1px solid var(--line)}
+    footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .disclaimer{font-size:10px;color:#8f8a82;max-width:900px;margin-top:18px}
+    @media(max-width:760px){nav{gap:12px}nav a:not(.nav-cta){display:none}.hero{min-height:570px}.hero-content{padding:75px 0 60px}.grid,.feature,.fund-grid,.steps{grid-template-columns:1fr}.product img{height:260px}section{padding:64px 0}.feature{gap:25px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="#top" aria-label="Superior Built Co.">Superior<small>BUILT CO.</small></a>
+    <nav>
+      <a href="#collection">Collection</a><a href="#story">Our standard</a><a href="#funding">The opportunity</a>
+      <a class="nav-cta" href="#contact">Investor inquiries</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="eyebrow">Rugged by design · Built for everyday</div>
+        <h1><em>Superior</em><br>Built Co.</h1>
+        <p>Workwear attitude. Everyday versatility. A new apparel concept centered on distinctive denim, hooded workwear jackets, and casual footwear.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#collection">Explore the collection</a>
+          <a class="btn secondary" href="#funding">Investor overview</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="manifesto">
+    <div class="script">Superior</div>
+    <strong>BE SUPERIOR OR NOTHING.</strong>
+  </div>
+
+  <section id="story">
+    <div class="wrap feature">
+      <div>
+        <div class="section-kicker">The brand standard</div>
+        <h2>Made to stand out.<br>Designed to hold up.</h2>
+        <p class="intro">Superior Built Co. is being developed around a simple idea: create a coordinated clothing line with a rugged point of view and a recognizable signature. The design direction pairs durable-looking materials and practical details with a clean, confident brand identity.</p>
+        <ul class="checks">
+          <li>Original flowing Superior script logo</li>
+          <li>Signature leather-look denim patches and branded details</li>
+          <li>Hooded workwear-inspired jackets</li>
+          <li>Coordinated denim and casual footwear</li>
+        </ul>
+      </div>
+      <img src="assets/brand_detail.jpg" alt="Superior-inspired denim patch and workwear design detail">
+    </div>
+  </section>
+
+  <section id="collection" style="background:#201f1c">
+    <div class="wrap">
+      <div class="section-kicker">The first collection</div>
+      <h2>Three foundations.<br>One identity.</h2>
+      <p class="intro">The initial product plan focuses on a tight, coordinated range. Product concepts are in development; manufacturing partners, final specifications, and production costs still need to be confirmed.</p>
+      <div class="grid">
+        <article class="product">
+          <img src="assets/collection.jpg" alt="Concept image of Superior denim jeans">
+          <div class="product-copy"><h3>01 / Premium denim</h3><p>Classic five-pocket styling, distinctive back-pocket stitching, and a signature waistband patch.</p></div>
+        </article>
+        <article class="product">
+          <img src="assets/lookbook.jpg" alt="Concept image of rugged hooded workwear jackets">
+          <div class="product-copy"><h3>02 / Hooded workwear</h3><p>Heavyweight jacket concepts with attached hoods, practical pockets, durable hardware, and rugged styling.</p></div>
+        </article>
+        <article class="product">
+          <img src="assets/collection.jpg" alt="Concept image of black Superior casual sneakers">
+          <div class="product-copy"><h3>03 / Everyday footwear</h3><p>Black casual sneaker concepts with coordinated logo placement and clean contrast detailing.</p></div>
+        </article>
+      </div>
+      <p class="note">Product imagery is conceptual artwork for brand presentation, not a photograph of finished, manufactured inventory.</p>
+    </div>
+  </section>
+
+  <section id="funding" class="funding">
+    <div class="wrap fund-grid">
+      <div>
+        <div class="section-kicker">The opportunity</div>
+        <h2>From designs<br>to first production.</h2>
+        <p class="intro">Superior Built Co. is exploring an initial funding target to support product sampling, supplier qualification, a controlled first production run, brand development, and launch preparation.</p>
+      </div>
+      <div>
+        <div class="amount">$50,000<span>PROPOSED FUNDING TARGET</span></div>
+        <p class="intro">Open to discussing a suitable arrangement with one investor or multiple investors, subject to due diligence and definitive agreements.</p>
+        <p class="note">This website is informational only. It is not an offer to sell or a solicitation to buy securities. Any investment opportunity, if made available, will be presented only through the appropriate approved offering materials and platform process.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="steps">
+        <div class="step"><b>01 / Develop</b><p>Finalize specifications, obtain manufacturer quotes, and order samples.</p></div>
+        <div class="step"><b>02 / Validate</b><p>Review fit, construction, quality, landed costs, and customer response.</p></div>
+        <div class="step"><b>03 / Launch</b><p>Begin with a measured production run and direct-to-consumer launch plan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" id="contact">
+    <div class="wrap">
+      <div class="section-kicker">Build the next chapter</div>
+      <h2>Be Superior<br>or Nothing.</h2>
+      <p>We are preparing the next steps for Superior Built Co. and welcome conversations with potential partners, experienced apparel manufacturers, and prospective investors.</p>
+      <a class="btn" href="mailto:YOUR-BUSINESS-EMAIL@example.com?subject=Superior%20Built%20Co.%20Inquiry">Contact the brand</a>
+      <p class="note">Before publishing, replace the placeholder email address and add your official Wefunder campaign link once it is approved and live.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><span>© <span id="year"></span> Superior Built Co. All rights reserved.</span><span>Be Superior or Nothing.</span></div>
+    <p class="disclaimer">Superior Built Co. is an early-stage apparel concept. Product images are illustrative concepts. Product availability, specifications, pricing, manufacturing, and launch timing are not yet finalized. Nothing on this website constitutes investment advice or an offer to sell securities.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
